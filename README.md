@@ -101,7 +101,7 @@ Note also that when random states different from the fixed input states are fed 
 * The goal of this code was to be as flexible as possible. One aspect that is rigid is selecting the number of qubits and input states. The code has potential for flexibility, but it's incomplete.
 *  Finally, another next step would be to test these circuits on  quantum devices. The code was run on IBMQ to test it, but only for verification (1 iteration was used) due to queue times. A next step would be to get meaningful results using quantum hardware. 
 
-## Resources
+## Sources
 * [PennyLane](https://www.pennylane.ai)
 * [IBM Quantum](https://quantum-computing.ibm.com/)
 * [“A generative modeling approach for benchmarking and training shallow quantum circuits”](https://www.nature.com/articles/s41534-019-0157-8)
