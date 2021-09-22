@@ -107,3 +107,4 @@ Note also that when random states different from the fixed input states are fed 
 * [“A generative modeling approach for benchmarking and training shallow quantum circuits”](https://www.nature.com/articles/s41534-019-0157-8)
 * https://pennylane.ai/qml/demos/tutorial_data_reuploading_classifier.html
 * https://pennylane.ai/qml/demos/tutorial_state_preparation.html
+* https://pennylane.ai/qml/demos/tutorial_state_preparation.html
