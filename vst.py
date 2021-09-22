@@ -102,6 +102,7 @@ class VariationalStateTransformation():
 
     # Train 
     def train(self):
+        print("Begin training.")
         # Start timer
         start = time.time()
         costs = []
@@ -126,19 +127,22 @@ class VariationalStateTransformation():
         return costs
     
     # Test parameters
-    def test(self):
+    def test(self, test_probs=True):
+        print("Begin testing.")
         self.outputs = [self.circuit(self.best_parameters, self.input_states[i], pure_state_density_matrix(self.target_states[i])) for i in range(self.num_solutions)]
-        self.output_probs = [self.circuit(self.best_parameters, self.input_states[i]) for i in range(self.num_solutions)]
+        if test_probs: self.output_probs = [self.circuit(self.best_parameters, self.input_states[i]) for i in range(self.num_solutions)]
 
     # Print results
     def compare_target_to_output(self):
         print('\nResults')
         print('=' * 75)
-        print('Average Fidelity:\t\t{}\n'.format(np.average(self.outputs)))
         for i in range(self.num_solutions):
             print('Target Vector\t\t\t{}\nOutput Probability\t\t{}\nFidelity\t\t\t{}\n'.format(
                 self.target_states[i], self.output_probs[i],  self.outputs[i])
             )
+        print('=' * 75)
+        print('Average Fidelity:\t\t{}\n'.format(np.average(self.outputs)))
+        
     # Write to file
     def write(self, file):
         header_row = [

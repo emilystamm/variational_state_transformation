@@ -11,7 +11,9 @@ if __name__ == "__main__":
     num_layers = 5
     # Input states
     input_states = [create_random_state(num_qubits=num_qubits, seed=i) for i in range(num_solutions)]
-    
+    print("Input State Parameters")
+    print(input_states)
+
     # Initialize  model 
     model = VariationalStateTransformation(
         input_states=input_states,
